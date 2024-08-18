@@ -15,5 +15,6 @@ spec:
       containers:
       - name: snake-game
         image: yash5090/snake-game:latest
+        imagePullPolicy: Always
         ports:
-        - containerPort: 5000
+          - containerPort: 5000
