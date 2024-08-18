@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snake-game-deployment
+spec:
+  replicas: 6  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: snake-game
+  template:
+    metadata:
+      labels:
+        app: snake-game
+    spec:
+      containers:
+      - name: snake-game
+        image: yash5090/snake-game:latest
+        ports:
+        - containerPort: 5000
